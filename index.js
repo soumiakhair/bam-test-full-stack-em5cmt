@@ -11,19 +11,25 @@ function solutionExercice1(N) {
   for (let i = N; i > 0; i--) {
     arrayStr = i + '';
     let tmp = 0;
-    for (let j = 0; j < arrayStr.lenght; j++) {
-      if (tmp <= parseInt(arrayStr.charAt(j))) {
-        tmp = parseInt(arrayStr.charAt(j));
-      } else {
-        tmp = 0;
-        break;
-      }
+    for(let i=N;i>0;i--){
+
+        arrayStr = i+"";
+        let tmp = 0;
+        for(let j=0;j<arrayStr.length;j++){
+            if(tmp <= parseInt(arrayStr.charAt(j))){
+                tmp =  parseInt(arrayStr.charAt(j));
+            } else {
+                tmp = 0;
+                break;
+            }
+        }
+        if(tmp != 0){
+            return i;
+        }
+        
     }
-    if (tmp != 0) {
-      return i;
+    return N;
     }
-  }
-  return N;
 }
 console.log(solutionExercice1(123));
 // return res
